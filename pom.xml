@@ -5,9 +5,9 @@
     <artifactId>ResteasyMimeTest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-  
-    <name>ResteasyMimeTest</name>
+
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -17,6 +17,11 @@
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.1.1.Final</version>
             </plugin>
         </plugins>
     </build>
@@ -50,7 +55,4 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
-    <properties>
-        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
-    </properties>
 </project>
