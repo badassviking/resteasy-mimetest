@@ -68,7 +68,9 @@ public class RequestServlet extends HttpServlet {
         } catch (Exception e) {
             response.getWriter().println(e);
         } finally {
-            clientResponse.releaseConnection();
+            if (clientResponse != null) {
+                clientResponse.releaseConnection();
+            }
         }
     }
 
